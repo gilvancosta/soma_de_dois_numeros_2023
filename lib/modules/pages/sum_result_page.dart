@@ -1,21 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:soma_de_dois_numeros_2023/core/utls/inherited_operating.dart';
 
 class SumResultPage extends StatelessWidget {
   static const routeName = '/sum';
-  final String firstValue;
-  final String secondValue;
+
 
   const SumResultPage({
     Key? key,
-    required this.firstValue,
-    required this.secondValue,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    int firstValue = int.parse(this.firstValue);
-    int secondValue = int.parse(this.secondValue);
+    int firstValue = int.parse(InheritedOperating.of(context).operating.first);
+    int secondValue = int.parse(InheritedOperating.of(context).operating.second);
     int sumResult = firstValue + secondValue;
 
     return Scaffold(

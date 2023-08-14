@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:soma_de_dois_numeros_2023/common/utls/app_router.dart';
+import 'package:soma_de_dois_numeros_2023/core/utls/app_router.dart';
 import 'package:soma_de_dois_numeros_2023/modules/home/material_home_page.dart';
 
 class StartMaterialApplication extends StatelessWidget {

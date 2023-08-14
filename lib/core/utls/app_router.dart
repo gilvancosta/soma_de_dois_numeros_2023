@@ -27,21 +27,16 @@ class AppRouter {
         return PageTransition(
           duration: animationDuration,
           type: PageTransitionType.rightToLeft,
-          child: SecondValuePage(
-            firstValue: settings.arguments.toString(),
-          ),
+          child: const SecondValuePage(),
         );
       case SumResultPage.routeName:
-        List<Object> arguments = settings.arguments as List<Object>;
+        // List<Object> arguments = settings.arguments as List<Object>;
         // print('arguments 0:  ${arguments[0].toString()}');
         // print('arguments 1:  ${arguments[1].toString()}');
         return PageTransition(
           duration: animationDuration,
           type: PageTransitionType.rightToLeft,
-          child: SumResultPage(
-            firstValue: arguments[0].toString(),
-            secondValue: arguments[1].toString(),
-          ),
+          child: const SumResultPage(),
         );
 
       default:

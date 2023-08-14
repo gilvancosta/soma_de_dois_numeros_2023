@@ -1,7 +1,8 @@
 // ignore_for_file: avoid_print
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:soma_de_dois_numeros_2023/common/functions/common_functions.dart';
+import 'package:soma_de_dois_numeros_2023/core/functions/common_functions.dart';
+import 'package:soma_de_dois_numeros_2023/core/utls/inherited_operating.dart';
 import 'package:soma_de_dois_numeros_2023/modules/pages/second_value_page.dart';
 
 class FirstValuePage extends StatelessWidget {
@@ -50,7 +51,11 @@ class FirstValuePage extends StatelessWidget {
 
           if (firstValue.isNotEmpty && firstValue != '0') {
             // Navigator.pushNamed(context, SecondValuePage.routeName); // opção 1
-            Navigator.of(context).pushNamed(SecondValuePage.routeName, arguments: firstValue); // opção 2
+            InheritedOperating.of(context).operating.first = firstValue;
+
+            Navigator.of(context).pushNamed(SecondValuePage.routeName); // o
+
+        //    Navigator.of(context).pushNamed(SecondValuePage.routeName, arguments: firstValue); // opção 2
 
 /*             Navigator.push(
               context,
