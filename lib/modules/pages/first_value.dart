@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:soma_de_dois_numeros_2023/core/functions/common_functions.dart';
 import 'package:soma_de_dois_numeros_2023/core/utls/inherited_operating.dart';
+import 'package:soma_de_dois_numeros_2023/core/widgets/hero_calculator_widget.dart';
 import 'package:soma_de_dois_numeros_2023/modules/pages/second_value_page.dart';
 
 class FirstValuePage extends StatelessWidget {
@@ -16,10 +17,10 @@ class FirstValuePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('First Value'),
-        actions: [
+        actions: const [
           Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Image.asset('assets/images/calculator.png'),
+            padding: EdgeInsets.all(8.0),
+            child: HeroCalculatorWidget(height: 50, width: 50),
           ),
         ],
       ),
@@ -55,7 +56,7 @@ class FirstValuePage extends StatelessWidget {
 
             Navigator.of(context).pushNamed(SecondValuePage.routeName); // o
 
-        //    Navigator.of(context).pushNamed(SecondValuePage.routeName, arguments: firstValue); // opção 2
+            //    Navigator.of(context).pushNamed(SecondValuePage.routeName, arguments: firstValue); // opção 2
 
 /*             Navigator.push(
               context,

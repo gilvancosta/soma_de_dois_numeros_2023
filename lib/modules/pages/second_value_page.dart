@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'package:soma_de_dois_numeros_2023/core/functions/common_functions.dart';
 import 'package:soma_de_dois_numeros_2023/core/utls/inherited_operating.dart';
+import 'package:soma_de_dois_numeros_2023/core/widgets/hero_calculator_widget.dart';
 import 'package:soma_de_dois_numeros_2023/modules/pages/sum_result_page.dart';
 
 class SecondValuePage extends StatelessWidget {
@@ -19,10 +20,10 @@ class SecondValuePage extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: const Text('Second Value '),
-          actions: [
+          actions: const [
             Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Image.asset('assets/images/calculator.png'),
+              padding: EdgeInsets.all(8.0),
+              child: HeroCalculatorWidget(height: 50, width: 50),
             ),
           ],
         ),
@@ -90,13 +91,13 @@ class SecondValuePage extends StatelessWidget {
             ); */
             }
           },
-          child: Column(
+          child: const Column(
             mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              Image.asset('assets/images/calculator.png', height: 60, width: 60),
-              const SizedBox(height: 10),
-              const Text('Somar',
+              HeroCalculatorWidget(height: 60, width: 60),
+              SizedBox(height: 10),
+              Text('Somar',
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,

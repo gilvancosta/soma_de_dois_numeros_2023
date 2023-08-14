@@ -21,9 +21,11 @@ void main() {
 
   runApp(InheritedOperating(
     operating: OperatingModel(),
-    child: const StartMaterialApplication(),
+    child: DevicePreview(
+      enabled: !kReleaseMode,
+      builder: (context) => const StartMaterialApplication(),
+    ),
   ));
-
 
 /*   if (Platform.isIOS) {
     runApp(const StartCupertinoApplication());

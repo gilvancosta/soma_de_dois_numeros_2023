@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:soma_de_dois_numeros_2023/core/utls/inherited_operating.dart';
+import 'package:soma_de_dois_numeros_2023/core/widgets/hero_calculator_widget.dart';
 
 class SumResultPage extends StatelessWidget {
   static const routeName = '/sum';
-
 
   const SumResultPage({
     Key? key,
@@ -20,10 +20,10 @@ class SumResultPage extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         title: const Text('Sum Result'),
-        actions: [
+        actions: const [
           Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Image.asset('assets/images/calculator.png'),
+            padding: EdgeInsets.all(8.0),
+            child: HeroCalculatorWidget(height: 60, width: 60),
           ),
         ],
       ),
@@ -47,11 +47,7 @@ class SumResultPage extends StatelessWidget {
                   color: Colors.yellow[900],
                 )),
             const SizedBox(height: 20),
-            const Image(
-              image: AssetImage('assets/images/calculator.png'),
-              height: 120,
-              width: 120,
-            ),
+            const HeroCalculatorWidget(height: 120, width: 120),
           ],
         ),
       ),
